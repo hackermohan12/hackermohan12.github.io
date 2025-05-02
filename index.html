@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whiteboard App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="toolbar">
+    <button onclick="setTool('pen')">✏️</button>
+    <button onclick="setTool('line')">📏</button>
+    <button onclick="setTool('rect')">▭</button>
+    <button onclick="setTool('circle')">⚪</button>
+    <button onclick="setTool('strokeEraser')">🧽</button>
+    <button onclick="setTool('objectEraser')">🗑️</button>
+    <input type="color" id="colorPicker" value="#000000" onchange="changeColor(this.value)"/>
+    <input type="file" id="imageUpload" accept="image/*" onchange="uploadImage(event)"/>
+    <button onclick="saveImage()">💾 Save</button>
+    <button onclick="printPDF()">🖨️ PDF</button>
+    <button onclick="addMorePages()">➕ 10 Pages</button>
+  </div>
+
+  <div id="canvasContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
